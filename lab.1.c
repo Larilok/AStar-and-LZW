@@ -3,8 +3,6 @@
 #include <string.h>
 #include <math.h>
 
-// #include "sumPoints.h"
-#define EOL '\n'
 
 struct nations {
   char name[25];
@@ -38,17 +36,6 @@ void Sort(struct nations* country)
 void writeOut(struct nations* country){
   FILE *pFile;
   pFile = fopen("results.csv", "w");
-  // char* result;
-  // char buffer[10];
-  // for (int i = 0; i < 10; i++){
-  //   result = country[i].name;
-  //   sprintf(buffer, "%d",country[i].score);
-  //   result[strlen(result)] = ' ';
-  //   strcat(result, buffer);
-  //   result[strlen(result)] = '\n';
-  //   fputs(result, pFile);
-  //   printf("%s  \n"),buffer[i];
-  // }
   int i = 0;
   while (i<10) {
 		fprintf(pFile, "%s %d \n", country[i].name, country[i].score); 
@@ -111,7 +98,7 @@ void Parse(struct nations* country, char* buf, int c){
   }
   char *substr = new char[10];
   for (int i = 0 ; i < 20 ; i++) {
-#ifdef DEBAG
+#ifdef DEBUG
     if(i >17){
     printf(" RULLLEZs %s %s %d \n",ptr1,ptr2, ptr1-ptr2);
     }
@@ -119,7 +106,7 @@ void Parse(struct nations* country, char* buf, int c){
 
         ptr2 = ptr1;
         ptr1 = strtok(NULL, ",") ;
-#ifdef DEBAG      
+#ifdef DEBUG      
     if(i >17){
     printf(" RULLLEZs %s %s %d \n",ptr1,ptr2, ptr1-ptr2);
     }
@@ -129,9 +116,7 @@ void Parse(struct nations* country, char* buf, int c){
         else strcpy(substr, ptr2);
         int value; sscanf(substr, "%d", &value);
         country[c].pointsToCountry[i] = value;
-        // if((*ptr1) != '\0') break;
-  // printf(" RULLLEZ %i %i\n",country[c].pointsToCountry[i],i);
-        
+     
   }
 }
 
@@ -158,36 +143,23 @@ int main() {
     
   }
   fclose(file);
+  #ifdef DEBUG
    printf("Country : %s \n",country[1].name);
    printf("Country : %i \n",country[1].pointsToCountry[2]);
+  
+  #endif // DEBUG
   sumPoints(country);
+  #ifdef DEBUG
   for (size_t i = 0; i < 20; i++)
   {
    printf("Score : %i \n",country[i].score);
   }
+  
+  #endif // DEBUG
 
  Sort(country);
  writeOut(country);
 
-
-
-#ifdef DEB    
-get how many countries we have (read first line)-> n
-struct countries country[n];
-while(file != EOF)
-  read until comma -> x
-    char value;
-    while((value = getc(file)) != ',') {
-          
-    }
-  strcpy(country[0].name, x);
-  wile(file != EOL)
-    read until comma -> y
-    counrty[i].score += y;
-  printf("%s\n", country[n].name);
-  printf("%i\n", country[n].score);
-//*/
-// printf("%c", EOL);
-#endif 
+ 
 return 0;
 }
