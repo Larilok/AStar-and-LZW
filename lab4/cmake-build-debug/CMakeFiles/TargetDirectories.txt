@@ -1,0 +1,4 @@
+D:/01_Code/C/PG/lab4/cmake-build-debug/CMakeFiles/a-star.dir
+D:/01_Code/C/PG/lab4/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/01_Code/C/PG/lab4/cmake-build-debug/CMakeFiles/main.dir
+D:/01_Code/C/PG/lab4/cmake-build-debug/CMakeFiles/rebuild_cache.dir

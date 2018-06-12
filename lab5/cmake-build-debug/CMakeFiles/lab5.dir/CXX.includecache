@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/01_Code/C/PG/lab5/dictionary.h
+
+D:/01_Code/C/PG/lab5/main.cpp
+iostream
+-
+cstring
+-
+vector
+-
+chrono
+-
+dictionary.h
+D:/01_Code/C/PG/lab5/dictionary.h
+operations.h
+D:/01_Code/C/PG/lab5/operations.h
+
+D:/01_Code/C/PG/lab5/operations.h
+

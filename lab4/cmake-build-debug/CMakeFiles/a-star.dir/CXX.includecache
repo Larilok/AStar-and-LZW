@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/01_Code/C/PG/lab4/src/AStar.h
+cmath
+-
+vector
+-
+algorithm
+-
+functional
+-
+ctime
+-
+set
+-
+
+D:/01_Code/C/PG/lab4/src/Astar.cpp
+AStar.h
+D:/01_Code/C/PG/lab4/src/AStar.h
+
